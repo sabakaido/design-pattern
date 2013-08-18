@@ -20,23 +20,23 @@ class BookShelf implements Aggregate {
     private $books = array();
     private $last = 0;
 
-    public function BookShelf () {
+    public function BookShelf() {
     }
 
     public function getBookAt($index) {
         return $this->books[$index];
     }
 
-    public function appendBook ($book) {
+    public function appendBook($book) {
         $this->books[$this->last] = $book;
         $this->last++;
     }
 
-    public function getLength () {
+    public function getLength() {
         return $this->last;
     }
 
-    public function iterators () {
+    public function iterators() {
         return new BookShelfIterator($this);
     }
 }

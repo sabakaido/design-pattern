@@ -4,7 +4,7 @@ require_once('BookShelf.php');
 require_once('Book.php');
 
 class Main {
-    public function setUP() {
+    public function run() {
         $this->shelf = new BookShelf;
         $this->shelf->appendBook(new Book("Around the World in 80 days"));
         $this->shelf->appendBook(new Book("Bible"));
@@ -20,4 +20,4 @@ class Main {
 }
 
 $main = new Main;
-$main->setUP();
+$main->run();

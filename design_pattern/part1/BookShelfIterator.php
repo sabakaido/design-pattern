@@ -16,12 +16,12 @@ class BookShelfIterator implements Iterators {
     private $bookShelf;
     private $index;
 
-    public function BookShelfIterator ($bookShelf) {
+    public function BookShelfIterator($bookShelf) {
         $this->bookShelf = $bookShelf;
         $this->index = 0;
     }
 
-    function hasNext () {
+    function hasNext() {
         if ($this->index < $this->bookShelf->getLength()) {
             return true;
         } else {
@@ -29,7 +29,7 @@ class BookShelfIterator implements Iterators {
         }
     }
 
-    function next () {
+    function next() {
         $book = $this->bookShelf->getBookAt($this->index);
         $this->index++;
         return $book;
